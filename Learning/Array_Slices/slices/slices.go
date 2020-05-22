@@ -55,6 +55,7 @@ func main() {
 
 	u = append(r[:2], r[3:]...) // removing tthe middle element and have to use the spread operation
 	fmt.Println(u)
-	fmt.Println(r)
+	fmt.Println(r) // unexpected behaviur because it maj¿ke refference to the same memory
+	// To solve that problem, you have to make a copy of the array with a loop
 
 }
