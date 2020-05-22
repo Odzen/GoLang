@@ -5,7 +5,7 @@ import (
 )
 
 // WE DONT HAVE HERITANCE IN GO, IT DOESNT FOLLOW THAT PRINCIPALE OF THE POO , instead
-// go haves something called "composition"
+// go haves something called "composition" and embedding
 
 type Animal struct {
 	Name   string
