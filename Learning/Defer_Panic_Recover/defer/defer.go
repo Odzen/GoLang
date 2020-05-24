@@ -7,6 +7,8 @@ import (
 	"net/http"
 )
 
+//Run in LIFO // last in - first out order
+
 func main() {
 	/*defer
 	fmt.Println(1)

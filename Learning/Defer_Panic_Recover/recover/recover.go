@@ -5,6 +5,8 @@ import (
 	"log"
 )
 
+// THE RECOVER FUNCTION IS USE TO RECOVER FOR PANICS, ONLY USE IN DEFERRED FUNCTIONS
+// THE CURRENT FUNCTION WONT CONTINUE BUT HIGER FUNCTIONS IN CALL STACK WILL
 /*
 	//Anonymous function, doesnt have a name so nothing can call this, it is define and we can call it exactly 1 time
 	//recover=its gonna return nil if the app isnt panic

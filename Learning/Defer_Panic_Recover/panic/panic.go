@@ -3,6 +3,7 @@ package main
 import "net/http"
 
 // WE DONT HAVE EXCEPTIONS IN GO, so we have panic
+// the panic only use in unrecoverable events beacuse it stops the app
 func main() {
 	/*
 		a, b := 1, 0
