@@ -55,9 +55,23 @@ func main() {
 	fmt.Println(len(statePopulations)) // it was delete in both instances
 	fmt.Println(len(sp))
 
-	//if exists, i declare the vairable at the same time in a conditona, but  this variable is only define within {} 
+	//if exists, i declare the vairable at the same time in a conditon, but  this variable is only define within {}
 	if popu, ok := statePopulations["Florida"]; ok {
 		fmt.Println(popu)
+	}
+
+	//for
+
+	for v, k := range statePopulations {
+		fmt.Println(k, v)
+	}
+
+	for v := range statePopulations {
+		fmt.Println(v)
+	}
+
+	for _, k := range statePopulations {
+		fmt.Println(k)
 	}
 
 }
