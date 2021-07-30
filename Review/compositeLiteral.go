@@ -12,6 +12,14 @@ type person struct {
 	Lname string // Outside
 }
 
+//Functions
+//func (receiver) identifier(parameters) (returns) { <code> }
+func (p person) speak() {
+	fmt.Println(p.fname, p.Lname, `says, "Good morning, James."`)
+}
+
+//Compostions
+
 func main() {
 	//Composite Literal --> type{...}
 	var t hotdog
@@ -35,5 +43,8 @@ func main() {
 	}
 
 	fmt.Println(p1)
+
+	//Functions
+	p1.speak()
 
 }
