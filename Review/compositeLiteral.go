@@ -35,6 +35,11 @@ type human interface {
 	speak()
 }
 
+// SecretAgent and person are humans, and implicite they use the method defined for the interface person
+func saySomething(h human) {
+	h.speak()
+}
+
 func main() {
 	//Composite Literal --> type{...}
 	var t hotdog
@@ -76,4 +81,8 @@ func main() {
 	//To acces to the method for Person, calling inner type
 	secretAgent1.person.speak()
 
+	// Interfaces and polymorphism
+
+	saySomething(p1)
+	saySomething(secretAgent1)
 }
