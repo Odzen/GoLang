@@ -18,7 +18,22 @@ func (p person) speak() {
 	fmt.Println(p.fname, p.Lname, `says, "Good morning, James."`)
 }
 
-//Compostions
+//For SecretAgent embedded types
+func (sa secretAgent) speak() {
+	fmt.Println(sa.fname, sa.Lname, `says, "Good morning, Agent."`)
+}
+
+//Compostions embedded types
+type secretAgent struct {
+	person
+	licenseToKill bool
+}
+
+//Interfaces, defines functionallity and allow polymorphism
+
+type human interface {
+	speak()
+}
 
 func main() {
 	//Composite Literal --> type{...}
@@ -46,5 +61,19 @@ func main() {
 
 	//Functions
 	p1.speak()
+
+	//Composition embedded types
+	secretAgent1 := secretAgent{
+		person{
+			"James",
+			"Bond",
+		},
+		true,
+	}
+
+	//To access to the method for a SecretAgent
+	secretAgent1.speak()
+	//To acces to the method for Person, calling inner type
+	secretAgent1.person.speak()
 
 }
