@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+</head>
+<body>
+
+/* Value to a template, $variable:= ., with . is the current data. We can access that variable anywhere in the program */
+{{$wisdom := .}}
+
+/*Access to the variable and display its value*/
+<h1>The meaning of life: {{$wisdom}}</h1>
+</body>
+</html>
