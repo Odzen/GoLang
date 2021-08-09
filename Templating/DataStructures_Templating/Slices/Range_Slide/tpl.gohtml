@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Peeps</title>
+</head>
+<body>
+<ul>
+    <!--When I use range over the current piece of data ".", I need to end the range-->
+    <!-- Fo every iteration of the loop, each iteration will be the current piece of data
+    So the output of the range ., becomes the input of the value inside <li> </li>
+    So for each iteration, the current piece of data is an element of the slice-->
+    {{range .}}
+        <li>{{.}}</li>
+    {{end}}
+</ul>
+</body>
+</html>
