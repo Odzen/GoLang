@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wisdom & Transport</title>
+</head>
+<body>
+
+<ul>
+    <!--The element Wisdom of the current data (Struct) ., which is a slide, and then it iterates taking the Name and Motto of each element-->
+    {{range .Wisdom}}
+        <li>{{.Name}} - {{.Motto}}</li>
+    {{end}}
+</ul>
+
+<ul>
+    <!--The element Transport of the current data (Struct) ., which is a slide, and then it iterates taking the Manufacturer, Model and Doors of each element-->
+    {{range .Transport}}
+        <li>{{.Manufacturer}} - {{.Model}} - {{.Doors}}</li>
+    {{end}}
+</ul>
+
+</body>
+</html>
