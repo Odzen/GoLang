@@ -1,8 +1,8 @@
 package main
 
 import (
-	"os"
 	"log"
+	"os"
 	"text/template"
 )
 
@@ -12,7 +12,7 @@ func init(){
 	tpl = template.Must(template.ParseFiles("tpl.gohtml"))
 }
 func main() {
-	//In this case it will print the values but not the key, because it is not evaluated in the .gohtml
+	//In this case it will print the values and the keys
 
 	sages:= map[string]string{
 		"India":    "Gandhi",
