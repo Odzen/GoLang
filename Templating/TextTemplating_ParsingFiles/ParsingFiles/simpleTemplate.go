@@ -19,7 +19,8 @@ func main() {
 	}
 
 	//STEP 2. EXECUTE FILES
-	//The Method Execute takes a Writer and data
+	//The Method Execute takes a Writer and data.
+	//Execute and print it, since Stdout
 	err=tpl.Execute(os.Stdout, nil)
 
 	if err!= nil{

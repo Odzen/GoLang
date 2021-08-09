@@ -22,6 +22,7 @@ func main() {
 	defer nf.Close()
 
 	//Step 3. Execute, and put in the file. Since nf is a file.
+	// I can pass the file nf, because the file implements the writer interface
 	err = tpl.Execute(nf, nil)
 	if err != nil {
 		log.Fatalln(err)

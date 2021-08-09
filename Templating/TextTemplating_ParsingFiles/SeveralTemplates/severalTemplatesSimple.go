@@ -9,7 +9,7 @@ import (
 func main() {
 
 	//STEP 1: Parsing the file number one, it returns a template
-	tpl, err:= template.ParseFiles("one.gmao")
+	tpl, err:= template.ParseFiles("one.gohtml")
 	if err != nil{
 		log.Fatalln(err)
 	}
@@ -23,7 +23,7 @@ func main() {
 
 
 	// Adding more files to parse into the template tpl
-	tpl, err = tpl.ParseFiles("two.gmao", "vespa.gmao")
+	tpl, err = tpl.ParseFiles("two.gohtml", "vespa.gohtml")
 	if err != nil {
 		log.Fatalln(err)
 	}
@@ -32,21 +32,21 @@ func main() {
 	// This time we use the method ExecuteTemplate because this allows me to Execute and specif Template
 	// ExecuteTemplate(Where, name of the template, data)
 	// This will print VESPA
-	err = tpl.ExecuteTemplate(os.Stdout, "vespa.gmao", nil)
+	err = tpl.ExecuteTemplate(os.Stdout, "vespa.gohtml", nil)
 	if err != nil {
 		log.Fatalln(err)
 	}
 
 	// Executing the template two
 	// This will Print TWO
-	err = tpl.ExecuteTemplate(os.Stdout, "two.gmao", nil)
+	err = tpl.ExecuteTemplate(os.Stdout, "two.gohtml", nil)
 	if err != nil {
 		log.Fatalln(err)
 	}
 
 	// Executing the template one
 	// This will print ONE
-	err = tpl.ExecuteTemplate(os.Stdout, "one.gmao", nil)
+	err = tpl.ExecuteTemplate(os.Stdout, "one.gohtml", nil)
 	if err != nil {
 		log.Fatalln(err)
 	}
