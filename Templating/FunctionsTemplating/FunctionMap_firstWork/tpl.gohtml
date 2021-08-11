@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>functions</title>
+</head>
+<body>
+
+<!--WE call the function just by typing the key before of the piece of data that we're handling
+Upper Case to the name = uc .Name-->
+{{range .Wisdom}}
+    {{uc .Name}}
+{{end}}
+
+<!--First three letters of the Name = ft .Name-->
+{{range .Wisdom}}
+    {{ft .Name}}
+{{end}}
+
+
+</body>
+</html>
