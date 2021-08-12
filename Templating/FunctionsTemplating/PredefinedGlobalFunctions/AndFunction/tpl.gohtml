@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>And Function</title>
+</head>
+<body>
+EXAMPLE #1
+Showing only each of the structs
+{{range .}}
+    {{.}}
+{{end}}
+
+
+EXAMPLE #2
+The if checks if it is any data and print it, so will print the structs (if .)
+{{if .}}
+    EXAMPLE #2 - {{.}}
+{{end}}
+
+EXAMPLE #3
+Checks if the data have a field name, and print it. (if .Name)
+{{range .}}
+    {{if .Name}}
+        EXAMPLE #3 - {{.Name}}
+    {{end}}
+{{end}}
+
+
+EXAMPLE #4
+If they have a name and an field Admin==true (if and .Name .Admin)
+So only will print Gandhi
+{{range .}}
+    {{if and .Name .Admin}}
+        EXAMPLE #4 - Name: {{.Name}}
+        EXAMPLE #4 - Motto: {{.Motto}}
+        EXAMPLE #4 - Admin: {{.Admin}}
+    {{end}}
+{{end}}
+</body>
+</html>
