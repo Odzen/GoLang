@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions Pipeline</title>
+</head>
+<body>
+
+    <!--Just the Value-->
+    {{.}}
+
+    <!-- data passed to the function fdbl
+    I dpuble the value-->
+    {{.| fdbl}}
+
+    <!-- data passed to the function fdbl, and the output of fdbl passed to fsq
+    I double the value and then square it-->
+    {{.| fdbl | fsq }}
+
+    <!-- data passed to the function fdbl, and the output of fdbl passed to fsq, and the its output passed into fsqrt
+    I double it, I square it, and then the result I will do the square root (La raiz)
+    -->
+    {{. | fdbl | fsq | fsqrt}}
+</body>
+</html>
