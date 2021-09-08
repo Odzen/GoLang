@@ -9,7 +9,7 @@ import (
 var tpl *template.Template
 
 func init(){
-	tpl = template.Must(template.ParseFiles("tpl.gohtml"))
+	tpl = template.Must(template.ParseFiles("index.gohtml"))
 }
 func main() {
 	//In this case it will print the values but not the key, because it is not evaluated in the .gohtml

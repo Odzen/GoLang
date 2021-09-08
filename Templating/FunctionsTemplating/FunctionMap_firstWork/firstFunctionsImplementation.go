@@ -40,7 +40,7 @@ func init() {
 	// Is the function New(name String) *template, that creates a *template and gives it a name
 	// I give no name, because I don't want to parse it, I just want to give it the functions with .Funcs
 	// And then Parse it
-	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("tpl.gohtml"))
+	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("index.gohtml"))
 }
 
 // It gets the first three letters of any string
@@ -92,7 +92,7 @@ func main() {
 		cars,
 	}
 
-	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", data)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", data)
 	if err != nil {
 		log.Fatalln(err)
 	}

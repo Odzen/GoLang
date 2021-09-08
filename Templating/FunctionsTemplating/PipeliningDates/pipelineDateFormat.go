@@ -10,7 +10,7 @@ import (
 var tpl *template.Template
 
 func init(){
-	tpl= template.Must(template.New("").Funcs(fm).ParseFiles("tpl.gohtml"))
+	tpl= template.Must(template.New("").Funcs(fm).ParseFiles("index.gohtml"))
 }
 
 // The function that formats the time
@@ -28,7 +28,7 @@ var fm=template.FuncMap{
 
 func main() {
 	// Executing passing the current time as data {{.}}
-	err:= tpl.ExecuteTemplate(os.Stdout,"tpl.gohtml", time.Now())
+	err:= tpl.ExecuteTemplate(os.Stdout,"index.gohtml", time.Now())
 
 	if err != nil{
 		log.Fatalln(err)

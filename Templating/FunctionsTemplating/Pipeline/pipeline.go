@@ -10,7 +10,7 @@ import (
 var tpl *template.Template
 
 func init() {
-	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("tpl.gohtml"))
+	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("index.gohtml"))
 }
 
 func double(x int) int {
@@ -33,7 +33,7 @@ var fm = template.FuncMap{
 
 func main() {
 
-	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", 3)
+	err := tpl.ExecuteTemplate(os.Stdout, "index.gohtml", 3)
 	if err != nil {
 		log.Fatalln(err)
 	}
